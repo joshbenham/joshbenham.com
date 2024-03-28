@@ -9,7 +9,7 @@ class HomePage extends Component
 {
     public function render(): View
     {
-        return view('livewire.pages.home')
+        return view('livewire.pages.home-page')
             ->title('Home - joshbenham.net');
     }
 }
