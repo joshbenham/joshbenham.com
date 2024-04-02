@@ -5,11 +5,11 @@ namespace App\Livewire\Pages;
 use Illuminate\View\View;
 use Livewire\Component;
 
-class HomePage extends Component
+class AboutPage extends Component
 {
     public function render(): View
     {
-        return view('livewire.pages.home-page')
-            ->title('Home - joshbenham.net');
+        return view('livewire.pages.about-page')
+            ->title('About - joshbenham.net');
     }
 }
