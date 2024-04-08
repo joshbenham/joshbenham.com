@@ -2,13 +2,15 @@
 
 namespace App\Livewire\Pages;
 
+use Illuminate\View\View;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class ContactPage extends Component
 {
-    public function render()
+    #[Title('Contact - joshbenham.net')]
+    public function render(): View
     {
-        return view('livewire.pages.contact-page')
-            ->title('Contact - joshbenham.net');
+        return view('livewire.pages.contact-page');
     }
 }
