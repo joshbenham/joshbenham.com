@@ -15,23 +15,51 @@
 
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="flex flex-col max-w-5xl min-h-screen px-4 mx-auto font-sans antialiased">
-        <header class="sm:flex items-center justify-between mt-4 sm:mt-8 text-center sm:text-left">
-            <a wire:navigate href="{{ route('about') }}" class="text-fuchsia-800 inline-flex font-bold text-xl outline-none hover:text-slate-500 focus:text-slate-500 mb-4 sm:mb-0 ">
+    <body class="container-sm w-1/2 mx-auto font-sans antialiased">
+        <header class="mt-8 text-center">
+            <a wire:navigate href="{{ route('about') }}" class="text-fuchsia-800 font-bold text-xl outline-none hover:text-slate-500 focus:text-slate-500 mb-4 sm:mb-0 ">
                 joshbenham
             </a>
 
-            <div class="space-x-4 sm:space-x-8 flex justify-evenly sm:block">
-                <a wire:navigate href="{{ route('about') }}" class="{{ request()->routeIs('about') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">About</a>
+            <div class="space-x-4 mt-4 sm:space-x-4 flex justify-evenly sm:block">
+                <a
+                    wire:navigate
+                    href="{{ route('about') }}"
+                    class="
+                        {{
+                            request()->routeIs('about')
+                                ? 'text-fuchsia-800'
+                                : 'text-black-500'
+                        }}
+                        inline-flex font-bold outline-none
+                        py-1 px-3 rounded-lg
+                        hover:text-fuchsia-800 focus:text-fuchsia-800
+                        bg-slate-200
+                    "
+                >About</a>
+                <a
+                    wire:navigate
+                    href="{{ route('contact') }}"
+                    class="
+                        {{ request()->routeIs('contact') ? 'text-fuchsia-800' : 'text-black-500' }}
+                        inline-flex font-bold outline-none
+                        py-1 px-3 rounded-lg
+                        hover:text-fuchsia-800 focus:text-fuchsia-800
+                        bg-slate-200
+                    "
+                >Contact</a>
                 {{-- <a wire:navigate href="/resume" class="{{ request()->routeIs('resume') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Resume</a> --}}
                 {{-- <a wire:navigate href="/uses" class="{{ request()->routeIs('uses') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Uses</a> --}}
                 {{-- <a wire:navigate href="/goals" class="{{ request()->routeIs('goals') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Goals</a> --}}
-                <a wire:navigate href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Contact</a>
             </div>
         </header>
 
-        <main class="flex-grow pb-16">
+        <main class="pb-4">
             {{ $slot }}
         </main>
+
+        <footer class="text-center font-bold mb-16">
+            <p class="text-sm text-gray-500">© {{ date('Y') }} joshbenham</p>
+        </footer>
     </body>
 </html>
