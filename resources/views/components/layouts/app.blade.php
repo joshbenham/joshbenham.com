@@ -54,12 +54,26 @@
             </div>
         </header>
 
-        <main class="pb-4">
+        <main class="pb-8">
             {{ $slot }}
         </main>
 
         <footer class="text-center font-bold mb-16">
-            <p class="text-sm text-gray-500">© {{ date('Y') }} joshbenham</p>
+            <p class="text-sm font-bold text-gray-500">© {{ date('Y') }} joshbenham.com</p>
+
+            <p class="mt-2 text-sm text-gray-500">
+                Built using
+                <a class="underline" href="https://laravel.com" target="_blank">Laravel</a>,
+                <a class="underline" href="https://livewire.laravel.com">Livewire</a>,
+                <a class="underline" href="https://filamentphp.com">Filament</a>,
+                <a class="underline" href="https://alpinejs.dev">Alpine JS</a>
+                and
+                <a class="underline" href="https://tailwindcss.com">Tailwind CSS</a>.
+            </p>
+
+            <p class="mt-2 text-sm text-gray-500">
+                <a class="underline" href="https://github.com/joshbenham/joshbenham.com">Code found on github.com</a>
+            </p>
         </footer>
     </body>
 </html>
