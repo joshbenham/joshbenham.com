@@ -26,7 +26,11 @@ class BlockResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->required()
-                    ->unique('blocks', 'name')
+                    ->unique(
+                        table: Block::class,
+                        column: 'name',
+                        ignoreRecord: true
+                    )
                     ->maxLength(255),
                 Forms\Components\MarkdownEditor::make('content')
                     ->required(),
