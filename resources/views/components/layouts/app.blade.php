@@ -15,8 +15,8 @@
 
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </head>
-    <body class="container-sm w-1/2 mx-auto font-sans antialiased">
-        <header class="mt-8 text-center">
+    <body class="bg-slate-100 font-sans antialiased">
+        <header class="my-8 text-center">
             <a wire:navigate href="{{ route('about') }}" class="text-fuchsia-800 font-bold text-xl outline-none hover:text-slate-500 focus:text-slate-500 mb-4 sm:mb-0 ">
                 joshbenham
             </a>
@@ -54,11 +54,11 @@
             </div>
         </header>
 
-        <main class="pb-8">
+        <main class="bg-white rounded shadow p-5 max-w-xl mx-auto">
             {{ $slot }}
         </main>
 
-        <footer class="text-center font-bold mb-16">
+        <footer class="text-center font-bold my-8">
             <p class="text-sm font-bold text-gray-500">© {{ date('Y') }} joshbenham.com</p>
 
             <p class="mt-2 text-sm text-gray-500">

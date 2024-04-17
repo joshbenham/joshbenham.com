@@ -1,5 +1,5 @@
 <div>
-    <h1 class="my-8 text-4xl font-bold tracking-tighter md:leading-tight md:text-5xl md:w-8/12 text-slate-900">
+    <h1 class="mb-3 text-4xl font-bold tracking-tighter md:leading-tight text-slate-900">
         About
     </h1>
 
