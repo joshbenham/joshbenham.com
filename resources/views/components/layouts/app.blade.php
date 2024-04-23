@@ -21,7 +21,7 @@
                 joshbenham
             </a>
 
-            <div class="space-x-4 mt-4 sm:space-x-4 flex justify-evenly sm:block">
+            <div class="md:space-x-4 mt-4 sm:space-x-4">
                 <a
                     wire:navigate
                     href="{{ route('about') }}"
@@ -31,8 +31,8 @@
                                 ? 'text-fuchsia-800'
                                 : 'text-black-500'
                         }}
-                        inline-flex font-bold outline-none
-                        py-1 px-3 rounded-lg
+                        sm:inline-block block font-bold outline-none
+                        sm:mx-0 sm:my-0 mx-5 my-2 py-1 px-3 rounded-lg
                         hover:text-fuchsia-800 focus:text-fuchsia-800
                         bg-slate-200
                     "
@@ -42,8 +42,8 @@
                     href="{{ route('contact') }}"
                     class="
                         {{ request()->routeIs('contact') ? 'text-fuchsia-800' : 'text-black-500' }}
-                        inline-flex font-bold outline-none
-                        py-1 px-3 rounded-lg
+                        sm:inline-block block font-bold outline-none
+                        sm:mx-0 sm:my-0 mx-5 my-2 py-1 px-3 rounded-lg
                         hover:text-fuchsia-800 focus:text-fuchsia-800
                         bg-slate-200
                     "
