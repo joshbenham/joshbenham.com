@@ -21,41 +21,43 @@
                 joshbenham
             </a>
 
-            <div class="md:space-x-4 mt-4 sm:space-x-4">
-                <a
-                    wire:navigate
-                    href="{{ route('about') }}"
+            <nav x-data="{ open: false }">
+                <div class="hidden md:block md:space-x-4 mt-4 sm:space-x-4">
+                    <x-navigation-item :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item>
+                    <x-navigation-item :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item>
+                    {{-- <x-navigation-item :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item> --}}
+                    {{-- <x-navigation-item :route="route('uses')" :active="request()->routeIs('uses')">Uses</x-navigation-item> --}}
+                    {{-- <x-navigation-item :route="route('goals')" :active="request()->routeIs('goals')">Goals</x-navigation-item> --}}
+                </div>
+
+                <button
+                    @click="open = !open"
                     class="
-                        {{
-                            request()->routeIs('about')
-                                ? 'text-fuchsia-800'
-                                : 'text-black-500'
-                        }}
-                        sm:inline-block block font-bold outline-none
-                        sm:mx-0 sm:my-0 mx-5 my-2 py-1 px-3 rounded-lg
+                        md:hidden font-bold outline-none
+                        mt-4 py-1 px-3 rounded-lg
                         hover:text-fuchsia-800 focus:text-fuchsia-800
                         bg-slate-200
                     "
-                >About</a>
-                <a
-                    wire:navigate
-                    href="{{ route('contact') }}"
-                    class="
-                        {{ request()->routeIs('contact') ? 'text-fuchsia-800' : 'text-black-500' }}
-                        sm:inline-block block font-bold outline-none
-                        sm:mx-0 sm:my-0 mx-5 my-2 py-1 px-3 rounded-lg
-                        hover:text-fuchsia-800 focus:text-fuchsia-800
-                        bg-slate-200
-                    "
-                >Contact</a>
-                {{-- <a wire:navigate href="/resume" class="{{ request()->routeIs('resume') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Resume</a> --}}
-                {{-- <a wire:navigate href="/uses" class="{{ request()->routeIs('uses') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Uses</a> --}}
-                {{-- <a wire:navigate href="/goals" class="{{ request()->routeIs('goals') ? 'text-fuchsia-800' : 'text-slate-500' }} inline-flex font-bold outline-none hover:text-fuchsia-800 focus:text-fuchsia-800">Goals</a> --}}
-            </div>
+                >
+                    Menu
+                </button>
+
+                <div x-show="open" class="md:hidden max-w-xl mx-auto">
+                    <div class="mt-4 space-y-3 bg-white rounded shadow p-5 mx-2 sm:mx-0">
+                        <x-navigation-item-mobile :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item-mobile>
+                        <x-navigation-item-mobile :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item-mobile>
+                        {{-- <x-navigation-item-mobile :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item-mobile> --}}
+                        {{-- <x-navigation-item-mobile :route="route('uses')" :active="request()->routeIs('uses')">Uses</x-navigation-item-mobile> --}}
+                        {{-- <x-navigation-item-mobile :route="route('goals')" :active="request()->routeIs('goals')">Goals</x-navigation-item-mobile> --}}
+                    </div>
+                </div>
+            </nav>
         </header>
 
-        <main class="bg-white rounded shadow p-5 max-w-xl mx-auto">
-            {{ $slot }}
+        <main class="max-w-xl mx-auto">
+            <div class="bg-white rounded shadow p-5 mx-4 sm:mx-0">
+                {{ $slot }}
+            </div>
         </main>
 
         <footer class="text-center font-bold my-8">
