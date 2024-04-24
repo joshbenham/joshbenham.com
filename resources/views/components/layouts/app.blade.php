@@ -74,7 +74,7 @@
             </p>
 
             <p class="mt-2 text-sm text-gray-500">
-                <a class="underline" href="https://github.com/joshbenham/joshbenham.com">Code found on github.com</a>
+                <a class="underline" href="https://github.com/joshbenham/joshbenham.com">This website is open source.</a>
             </p>
         </footer>
     </body>
