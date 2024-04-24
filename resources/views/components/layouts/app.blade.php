@@ -43,7 +43,7 @@
                 </button>
 
                 <div x-show="open" class="md:hidden max-w-xl mx-auto">
-                    <div class="mt-4 space-y-3 bg-white rounded shadow p-5 mx-2 sm:mx-0">
+                    <div class="mt-4 space-y-1 bg-white rounded shadow p-5 mx-2 sm:mx-0">
                         <x-navigation-item-mobile :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item-mobile>
                         <x-navigation-item-mobile :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item-mobile>
                         {{-- <x-navigation-item-mobile :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item-mobile> --}}
