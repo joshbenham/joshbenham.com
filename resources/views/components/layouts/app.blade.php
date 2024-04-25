@@ -24,10 +24,9 @@
             <nav x-data="{ open: false }">
                 <div class="hidden md:block md:space-x-4 mt-4 sm:space-x-4">
                     <x-navigation-item :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item>
+                    <x-navigation-item :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item>
+                    <x-navigation-item :route="route('projects')" :active="request()->routeIs('projects')">Projects</x-navigation-item>
                     <x-navigation-item :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item>
-                    {{-- <x-navigation-item :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item> --}}
-                    {{-- <x-navigation-item :route="route('uses')" :active="request()->routeIs('uses')">Uses</x-navigation-item> --}}
-                    {{-- <x-navigation-item :route="route('goals')" :active="request()->routeIs('goals')">Goals</x-navigation-item> --}}
                 </div>
 
                 <button
@@ -45,10 +44,9 @@
                 <div x-show="open" class="md:hidden max-w-xl mx-auto">
                     <div class="mt-4 space-y-1 bg-white rounded shadow p-5 mx-2 sm:mx-0">
                         <x-navigation-item-mobile :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item-mobile>
+                        <x-navigation-item-mobile :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item-mobile>
+                        <x-navigation-item-mobile :route="route('projects')" :active="request()->routeIs('projects')">Projects</x-navigation-item-mobile>
                         <x-navigation-item-mobile :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item-mobile>
-                        {{-- <x-navigation-item-mobile :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item-mobile> --}}
-                        {{-- <x-navigation-item-mobile :route="route('uses')" :active="request()->routeIs('uses')">Uses</x-navigation-item-mobile> --}}
-                        {{-- <x-navigation-item-mobile :route="route('goals')" :active="request()->routeIs('goals')">Goals</x-navigation-item-mobile> --}}
                     </div>
                 </div>
             </nav>

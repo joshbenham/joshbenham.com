@@ -3,10 +3,8 @@
 namespace App\Livewire\Pages;
 
 use App\Livewire\Forms\ContactForm;
-use App\Models\Contact;
 use Illuminate\View\View;
 use Livewire\Attributes\Title;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class ContactPage extends Component
