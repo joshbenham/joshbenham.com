@@ -42,20 +42,20 @@
                 </button>
 
                 <div x-show="open" class="md:hidden max-w-xl mx-auto">
-                    <div class="mt-4 space-y-1 bg-white rounded shadow p-5 mx-2 sm:mx-0">
+                    <x-panel class="mt-4 space-y-1 mx-2 sm:mx-0">
                         <x-navigation-item-mobile :route="route('about')" :active="request()->routeIs('about')">About</x-navigation-item-mobile>
                         <x-navigation-item-mobile :route="route('resume')" :active="request()->routeIs('resume')">Resume</x-navigation-item-mobile>
                         <x-navigation-item-mobile :route="route('projects')" :active="request()->routeIs('projects')">Projects</x-navigation-item-mobile>
                         <x-navigation-item-mobile :route="route('contact')" :active="request()->routeIs('contact')">Contact</x-navigation-item-mobile>
-                    </div>
+                    </x-panel>
                 </div>
             </nav>
         </header>
 
         <main class="max-w-xl mx-auto">
-            <div class="bg-white rounded shadow p-5 mx-4 sm:mx-0">
+            <x-panel class="mx-4 sm:mx-0">
                 {{ $slot }}
-            </div>
+            </x-panel>
         </main>
 
         <footer class="text-center font-bold my-8">
