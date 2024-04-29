@@ -13,6 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
+    ->withSchedule(function ($schedule) {
+        $schedule->command('app:generate-sitemap')->daily();
+    })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
