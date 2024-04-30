@@ -15,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withSchedule(function ($schedule) {
         $schedule->command('app:generate-sitemap')->daily();
+        $schedule->command('google-fonts:fetch')->daily();
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
