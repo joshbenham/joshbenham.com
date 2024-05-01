@@ -16,19 +16,19 @@
         <form wire:submit="save" class="mt-4">
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                <input type="text" id="name" wire:model="form.name" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <input type="text" id="name" wire:model.live="form.name" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 @error('form.name') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
             </div>
 
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                <input type="text" id="email" wire:model="form.email" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <input type="text" id="email" wire:model.live="form.email" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 @error('form.email') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
             </div>
 
             <div class="mb-4">
                 <label for="content" class="block text-gray-700 text-sm font-bold mb-2">Content:</label>
-                <textarea id="content" wire:model="form.content" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <textarea id="content" wire:model.live="form.content" class="shadow appearance-none border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 @error('form.content') <span class="text-red-500 text-xs">{{ $message }}</span> @enderror
             </div>
 
