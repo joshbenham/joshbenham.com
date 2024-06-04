@@ -1,7 +1,6 @@
 <?php
 
 use App\Livewire\Block;
-use App\Livewire\Forms\ContactForm;
 use App\Livewire\Pages\ContactPage;
 use Livewire\Livewire;
 
