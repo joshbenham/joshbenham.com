@@ -1,14 +1,7 @@
 <div>
-    <h1 class="mb-3 text-4xl font-bold tracking-tighter md:leading-tight text-slate-900">
-        Contact
-    </h1>
+    <x-header>Contact</x-header>
 
-    @if (session()->has('message'))
-        <div class="bg-green-200 text-green-800 border-l-4 border-green-500 p-4" role="alert">
-            <p class="font-bold">Success</p>
-            {{ session('message') }}
-        </div>
-    @endif
+    <x-alert></x-alert>
 
     <livewire:block name="Contact" />
 
