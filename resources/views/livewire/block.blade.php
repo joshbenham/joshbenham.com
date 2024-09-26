@@ -1,5 +1,4 @@
 <div>
-
     @if ($this->exists())
         <div class="prose">
             {!! Str::markdown($this->format(), [
