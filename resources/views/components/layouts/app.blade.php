@@ -1,3 +1,10 @@
+<?php
+use Livewire\Volt\Component;
+
+new class extends Component {
+};
+?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
