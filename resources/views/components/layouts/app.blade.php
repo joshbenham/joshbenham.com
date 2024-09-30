@@ -1,3 +1,10 @@
+<?php
+use Livewire\Volt\Component;
+
+new class extends Component {
+};
+?>
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -5,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ $title ?? 'joshbenham.com' }}</title>
+        <title>{{ \Livewire\Volt\CompileContext::instance()->title ?? 'joshbenham.com' }}</title>
 
         <!-- Fonts -->
         @googlefonts
@@ -17,7 +24,7 @@
     </head>
     <body class="bg-slate-100 font-sans antialiased">
         <header class="my-8 text-center">
-            <a wire:navigate href="{{ route('about') }}" class="text-fuchsia-800 font-bold text-xl outline-none hover:text-slate-500 focus:text-slate-500 mb-4 sm:mb-0 ">
+            <a wire:navigate href="{{ route('about') }}" class="text-fuchsia-800 font-bold text-xl outline-none hover:text-slate-500 focus:text-slate-500 mb-4 sm:mb-0">
                 joshbenham
             </a>
 
