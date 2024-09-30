@@ -11,7 +11,7 @@ new class extends Component { };
 ?>
 
 <x-layouts.app>
-    @volt ('about')
+    @volt('about')
         <div>
             <x-header>About</x-header>
 
