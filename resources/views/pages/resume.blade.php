@@ -5,7 +5,7 @@ use function Livewire\Volt\title;
 use Livewire\Volt\Component;
 
 name('resume');
-title(__('Resume - joshbenham.net'));
+title(__('Resume - joshbenham.com'));
 
 new class extends Component { };
 ?>

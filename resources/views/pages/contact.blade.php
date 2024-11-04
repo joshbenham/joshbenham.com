@@ -6,7 +6,7 @@ use App\Livewire\Forms\ContactForm;
 use Livewire\Volt\Component;
 
 name('contact');
-title(__('Contact - joshbenham.net'));
+title(__('Contact - joshbenham.com'));
 
 new class extends Component {
     public ContactForm $form;
