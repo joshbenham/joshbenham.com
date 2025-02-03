@@ -16,7 +16,7 @@ class User extends Authenticatable implements FilamentUser
     use HasFactory, Notifiable;
 
     /**
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $fillable = [
         'name',
@@ -25,7 +25,7 @@ class User extends Authenticatable implements FilamentUser
     ];
 
     /**
-     * @var array<int, string>
+     * @var list<string>
      */
     protected $hidden = [
         'password',
