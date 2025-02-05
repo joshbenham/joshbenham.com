@@ -12,13 +12,13 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
-    ->withMiddleware(function (Middleware $middleware) {
+    ->withMiddleware(function (Middleware $middleware): void {
         //
     })
-    ->withSchedule(function ($schedule) {
+    ->withSchedule(function ($schedule): void {
         $schedule->command('app:generate-sitemap')->daily();
         $schedule->command('google-fonts:fetch')->daily();
     })
-    ->withExceptions(function (Exceptions $exceptions) {
+    ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();

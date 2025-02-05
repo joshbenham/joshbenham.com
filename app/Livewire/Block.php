@@ -19,9 +19,7 @@ final class Block extends Component
 
     public function format(): string
     {
-        $content = ModelsBlock::where('name', $this->name)->value('content');
-
-        return $content;
+        return ModelsBlock::where('name', $this->name)->value('content');
     }
 
     public function render(): View
