@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 it('returns a successful home response', function () {
     $response = $this->get('/');
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BlockResource\Pages;
@@ -10,7 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class BlockResource extends Resource
+final class BlockResource extends Resource
 {
     protected static ?string $model = Block::class;
 

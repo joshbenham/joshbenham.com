@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Livewire\Forms;
 
 use Livewire\Volt\Volt;

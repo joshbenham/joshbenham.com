@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\Block as ModelsBlock;
 use Illuminate\View\View;
 use Livewire\Component;
 
-class Block extends Component
+final class Block extends Component
 {
     public string $name;
 

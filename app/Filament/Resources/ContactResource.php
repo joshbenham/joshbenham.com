@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ContactResource\Pages;
@@ -11,7 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactResource extends Resource
+final class ContactResource extends Resource
 {
     protected static ?string $model = Contact::class;
 
