@@ -9,5 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 final class Block extends Model
 {
+    /** @use HasFactory<\Database\Factories\BlockFactory> */
     use HasFactory;
 }
